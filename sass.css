@@ -1,0 +1,21 @@
+body {
+  background-color: brown; }
+
+header {
+  background-color: chocolate; }
+
+.g {
+  width: 200px;
+  height: 100px; }
+
+.k {
+  width: 500;
+  height: 1.5 px;
+  font: 30px/1.8px  veradana; }
+
+.f {
+  width: 500;
+  height: 1.5 px;
+  font: 30px/1.8px  veradana; }
+
+/*# sourceMappingURL=sass.css.map */

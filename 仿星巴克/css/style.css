@@ -1,0 +1,172 @@
+*{
+    margin:0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    border: 0;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+html{
+    font-size: 14px;
+
+}
+/**header start*/
+#header{
+    height: 100px;
+    padding: 0 38px;
+    top :0px;
+    left: 0px;
+    right: 0px;
+    position : fixed;
+    background-color: #ffffee;
+    display: -webkit-box;
+}
+#header>div{
+    -webkit-box-flex: 1;
+    /*有>是对后代分份，没有是子代，默认横着分*/
+}
+#menu{
+    height: 46px;
+    margin-top:37px;
+}
+#menu a{
+    width: 30px;
+    display:block;
+    font-size: 14px;
+    text-align: center;
+    color: #333333;
+}
+#logo {
+    text-align: center;
+}
+#logo img{
+    width: 73px;
+    margin-top:14px;
+}
+#header #login{
+    height: 30px;
+    text-align: right;
+    margin-top:37px;
+    color:#4e4e4e;
+    font-size: 14px;
+    line-height: 20px;
+}
+#header #login a{
+    color: burlywood;
+    font-size: 14px;
+    font-weight: bolder;
+
+
+}
+#header #login a:hover{
+    color: #a98e67;
+
+}
+
+@media screen and(max-width: 767px) {
+
+    html{
+        font-size: 12px;
+    }
+}
+
+/**header end*/
+
+/**club start*/
+#club{
+    background: #202020;
+    padding: 90px 35px;
+    text-align: center;
+
+}
+#club h2{
+    font-size: 30px;
+    font-weight: 400;//字体粗细
+    line-height: 32px;
+    color: #fffffe;
+    margin:0 0 10px  ;
+}
+#club p{
+    font-size: 18px;
+    line-height: 32px;//行间距
+    color: #999;
+}
+.clublogin{
+    margin-top: 55px;
+}
+
+.clublogin a{
+    padding: 14px 40px;
+    border: 2px solid #a98e67 ;
+    color:#a98e67;
+    display: inline-block;
+    margin:0 14px;
+}
+.clublogin a:hover{
+    color:#ffe;
+    background: #a98e67;
+ }
+/**club end*/
+@media (max-width: 767px) {
+    #header #login{
+        font-size: 12px;
+        line-height: 15px;
+    }
+    #header #login a{
+        font-size: 12px;
+    }
+    #club{
+        padding: 50px 35px;
+    }
+    .clublogin a{
+        width: 100%;
+        padding: 14px 0;
+        margin:0 ;
+    }
+
+
+}
+#banner{
+    height: 700px;
+    margin-top: 100px;
+    background: url("../images/01.jpg");
+    background-size: cover ;
+    width: 100%;
+
+}
+.bannermore{
+text-align: center;
+    padding-top: 220px;
+}
+ .bannermore a{
+    color: #ffffee;
+    background-color: burlywood;
+    font-size: 30px;
+    font-weight: 300;
+     opacity: 0.8;
+     transition: all 1s;
+
+ }
+.bannermore a:hover{
+    color:#ffe;
+    background: sienna;
+    opacity: 1;
+}
+
+@media (max-width: 767px){
+    #banner{
+        background: url("../images/02.jpg");
+        background-size: cover ;
+    }
+    .bannermore a{
+        font-size: 20px;
+    }
+}

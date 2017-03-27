@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="app">
+  name:  <input type="text" v-model="name">
+    age:  <input type="text" v-model="age">
+<!--model取值-->
+    <button @click="add(val)">add</button>
+     <ul>
+        <li v-for=" val in arr">
+            {{val}}
+        </li>
+         <button @click="delete(val)">delete</button>
+    </ul>
+
+</div>
+<script src="vue.js"></script>
+<script>
+     new Vue({
+        el:'#app',
+        data:{
+            arr:[],
+            name:'',
+            age:''
+
+        },
+        methods:{
+            add:function() {
+                this.arr.push(this.name +''+this.age );
+                this.name = '';
+                this.age= ''
+            },
+           delete:function(val){
+           this.arr.splice(val,1)
+
+            }
+        }
+    });
+
+
+
+
+</script>
+</body>
+</html>
