@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<ul>
+    <li>11</li>
+    <li>22</li>
+    <li>33</li>
+</ul>
+<button id="button">点击</button>
+<div id="div">安意如</div>
+<script>
+    var button=document.getElementById('button');
+    button.onclick= function() {
+        var div = document.getElementById('div');
+        div.style.background = 'red';
+        div.style.height = '50px';
+        div.style.wight = '100px';
+    };
+        var li=document.getElementsByTagName('li');
+//        li[0].onclick=function(){
+ //          alert(li[0].innerHTML);
+    for(var i=0;i<li.length;i++){
+        li[i].onclick=function(){
+     //      alert(li.innerHTML);单击li显示自己的内容, for循环会瞬间执行结束，不可取。
+            alert(this.innerHTML) ;//this指向当前操纵的对象
+        };
+    }
+//   点击button，使div的背景发生变化。先用document.getElementById('ID')取到button的ID
+//  将方法赋给onclick，方法里写点击会发生的事件。
+
+
+
+</script>
+
+</body>
+</html>

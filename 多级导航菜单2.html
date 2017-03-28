@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            list-style:none;
+            text-decoration: none;
+        }
+
+        #menu li{
+            float: left;
+            margin-right: 5px;
+        }
+        .main-menu {
+            color: rgb(255,255,255);
+            display: block;
+            width: 120px;
+            height:30px;
+            background-color: #c0a16b;
+            text-align: center;
+            line-height:30px;
+            list-style:none;
+            margin-right: 5px;
+        }
+        /*h1{*/
+            /*background-color: #8a6d3b;*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*margin: 50px;*/
+        /*}*/
+        .sub-menu{
+            background-color: tan;
+            width: 120px;
+            text-align: center;
+            line-height:30px;
+            list-style:none;
+            display: none;
+        }
+        #menu .sub-menu li{
+            float: none;
+           border-bottom: 1px dotted #000;
+           height: 25px;
+           line-height: 25px;
+        }
+        /*#menu >li:hover .sub-menu{*/
+            /*display: block;*/
+        /*}*/
+    </style>
+
+</head>
+<body>
+<ul id="menu">
+    <li  >
+        <a class="main-menu" href="#">link1</a>
+       <ul class="sub-menu" >
+          <li><a href="#">sublink1</a></li>
+          <li><a href="#">sublink2</a></li>
+          <li><a href="#">sublink3</a></li>
+       </ul>
+    </li>
+    <li  >
+        <a class="main-menu" href="#">link2</a>
+        <ul class="sub-menu">
+           <li><a href="#">sublink1</a></li>
+           <li><a href="#">sublink2</a></li>
+           <li><a href="#">sublink3</a></li>
+        </ul>
+    </li>
+    <li >
+        <a class="main-menu" href="#">link3</a>
+        <ul class="sub-menu">
+            <li><a href="#">sublink1</a></li>
+            <li><a href="#">sublink2</a></li>
+            <li><a href="#">sublink3</a></li>
+        </ul>
+
+    </li>
+    <!--li*3>a[href=#]{link$} ul快捷键-->
+    <!--<h1>haha</h1>-->
+
+</ul>
+<script>
+//    var oMenu=document.getElementById('menu');
+//    var aMainMenu=oMenu.getElementsByClassName('a');//找menu下的a，所以先取出menu，
+//      var aSubMenu=oMenu.getElementsByTagName('ul')
+//    for(var i=0;i<aMainMenu.length;i++) {
+//        if(aMainMenu[i].className=='main-menu')// 再取出12个a，用for循环过滤出需要的a
+//        {
+//            aMainMenu[i].onmousemove = function () {
+//
+//            };
+//            aMainMenu[i].onmouseout = function () {
+//            };//找到className是main-menu的a，绑定滑入滑出事件
+//        }
+//    }
+
+    var oMenu=document.getElementById('menu');
+    //byclassname方法IE8及以前版本不支持,用.children找到menu的子代，
+    // 即三个li,取出三个li的index存储，this里存入了main-menu的index
+    var aLi=oMenu.children;
+    for(var i=0; i<aLi.length;i++){
+
+        aLi[i].onmouseover=function(){
+            this.children[1].style.display='block';
+        };
+        aLi[i].onmouseout=function(){
+            this.children[1].style.display='none';
+        };
+    }
+
+
+</script>
+</body>
+</html>
