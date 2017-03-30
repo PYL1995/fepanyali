@@ -35,7 +35,7 @@
         .sub-menu{
             background-color: tan;
             width: 120px;
-            text-align: center;
+
             line-height:30px;
             list-style:none;
             display: none;
@@ -100,7 +100,7 @@
 
     var oMenu=document.getElementById('menu');
     //byclassname方法IE8及以前版本不支持,用.children找到menu的子代，
-    // 即三个li,取出三个li的index存储，this里存入了main-menu的index
+    // 即三个li,取出三个li的index存储，this里存入了点击的main-menu的index
     var aLi=oMenu.children;
     for(var i=0; i<aLi.length;i++){
 
